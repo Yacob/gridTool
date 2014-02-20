@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class cubeScript : MakeGrid {
+public class cubeScript : MonoBehaviour {
 
 	// Use this for initialization
 	
 	// Update is called once per frame
+	public MakeGrid grid;
 	
 	void Update () {
 		bool up = Input.GetKey(KeyCode.UpArrow);
@@ -34,7 +35,7 @@ public class cubeScript : MakeGrid {
 		}
 		if(!up && !down && !left && !right){
 			Vector3 pos = transform.position;
-			pos = snap(pos);
+			pos = grid.snap(pos);
 			transform.position = pos;
 		}
 	}
