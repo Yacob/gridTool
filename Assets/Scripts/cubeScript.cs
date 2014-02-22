@@ -9,6 +9,7 @@ public class cubeScript : MonoBehaviour {
 	public MakeGrid grid;
 	
 	void Update () {
+		//modify to only move selected object using mousedown and/or raycasting
 		bool up = Input.GetKey(KeyCode.UpArrow);
 		bool down = Input.GetKey(KeyCode.DownArrow);
 		bool right = Input.GetKey(KeyCode.RightArrow);
